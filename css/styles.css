@@ -315,7 +315,7 @@ a:active {
 #cuerpo {
 	width:845px;
 	height:auto;
-	margin:0 57px;
+	margin:-11px 57px;
 	float:left;
 	font-family: Calibri, Helvetica, Arial;
 	font-size:14px;
@@ -598,56 +598,6 @@ a:active {
 
 
 	
-/*Middle */
-
-#cuerpo {
-	width:845px;
-	height:auto;
-	margin:0 57px;
-	float:left;
-	font-family: Calibri, Helvetica, Arial;
-	font-size:14px;
-	text-align:left;
-	}
-#banner{
-	width:842px;
-    height:318px;
-    alignment-adjust:central;
-    margin: 5px 0 0;
-   	background-repeat: no-repeat;
-	}
-#contenido{
-	width:842px;
-	height:auto;
-/*	background-color:#030;*/
-	float:left	
-	}
-#contenido_tarifas{
-	width:490px;
-	height:auto;
-	margin-right:10px;
-	/*background-color:#033;*/
-	float:left		
-	}
-#contenido_lateral_der{
-	width:330px;
-	height:auto;
-	float:right;
-	margin-left:12px;
-}
-.titulos_destacados{
-	font-weight: bold;
-	font-size: 17px;
-	color: #005ca7;
-}
-.titulos_tabla{
-	font-weight: bold;
-	font-size: 14px;
-	color: #1458A6;
-	}
-.tabla_bck_blue{
-	background-color:#e6f5fb;
-	}
 
 /*Footer*/
 
