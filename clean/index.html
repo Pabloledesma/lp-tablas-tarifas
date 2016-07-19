@@ -29,6 +29,27 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script>
+        System.config({
+            packages: {        
+              app: {
+                format: 'register',
+                defaultExtension: 'js'
+              }
+            }
+        });
+        System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+
 </head>
 
 <body>
@@ -42,10 +63,9 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-               <a class="navbar-brand" href="http://www.copaair.com/" target="_blank">
-                 <!-- <img src="../images/logos/LOGO-COPA.png"> -->
-                 Copa Airlines
-              </a>
+                <a class="navbar-brand" href="http://www.copaair.com/" target="_blank">
+                    <img src="img/LOGO-COPA.png">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -171,8 +191,12 @@
                             </select>
                         </div>
                     </div>
-
-                    div
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <button type="submit" class="btn btn-default">Search flight</button>
+                        </div>
+                    </div>
+                    
                 </form>
             </div>
 
