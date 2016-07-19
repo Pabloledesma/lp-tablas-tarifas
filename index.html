@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');            ga('create', 'UA-26727407-1', 'auto');            ga('send', 'pageview');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');            ga('create', 'UA-26727407-1', 'auto');            ga('send', 'pageview');
     </script>
-    <script type="text/javascript" src="https://www.copaair.com/copa-theme/omniture/s_code.js"></script>
+    <script type="text/javascript" src="js/s_code.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -68,12 +68,14 @@
       </div> <!--fin cabezonte-->
 
 
-    <div class="container"> 
-       <div id="cuerpo">
-
-       <div id="banner" style="margin-top:0">
-        <img src="images/VISA-.WEB.jpg" width="842" height="302" alt="Banner" />
-       </div> <!--fin banner-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="images/VISA-.WEB.jpg" alt="Banner" class="img-responsive" />
+            </div>
+        </div> 
+     
+     
        
        <div id="contenido">
          <div id="contenido_tarifas">
@@ -96,157 +98,169 @@
             </div>
           </div> -->
         </div><!-- contenido tarifas -->
-        <div id="contenido_lateral_der">
-          <div>
-            <div id="canvas_booking">
-              <div class="header"> <img src="images/tit_booking_ES.jpg" width="326" height="45"  alt="Bookin"/></div>
-              <div class="cWhite">
-                <div class="mc_campos_line">
-                  <input name="radIdaVuelta" type="radio" value="RT" checked="checked" />
-                  Ida y vuelta&nbsp;&nbsp;
-                  <input name="radIdaVuelta" type="radio" class="positioner_one" value="OW" />
-                  Una V&iacute;a</div>
-                </div>
-                <div class="cBlue">
-                  <div class="mc_campos_line">
-                    <select class="mc_field_1" id="DESDE" name="DESDE">
-                      <option value="0" selected="selected">Desde</option>
+    <div id="contenido_lateral_der">
+    <div>
+    <div id="canvas_booking">
+    <div class="header"> <img src="images/tit_booking_ES.jpg" width="326" height="45"  alt="Bookin"/></div>
+    <div class="cWhite">
+    <div class="mc_campos_line">
+    <input name="radIdaVuelta" type="radio" value="RT" checked="checked" />
+    Ida y vuelta&nbsp;&nbsp;
+    <input name="radIdaVuelta" type="radio" class="positioner_one" value="OW" />
+    Una V&iacute;a</div>
+    </div>
+    <div class="cBlue">
+    <div class="mc_campos_line">
+    <select class="mc_field_1" id="DESDE" name="DESDE">
+    <option value="0" selected="selected">Desde</option>
+    </select>
+    &nbsp;
+    <select class="mc_field_1" id="HACIA" name="HACIA">
+    <option value="0">Hacia</option>
+    </select>
+    </div>
+    </div>
+    <div class="cWhite">
+    <div class="mc_campos_line">
+    <input type="radio" class="" value="Business" name="cabinClass" />
+    Clase ejecutiva&nbsp;&nbsp;
+    <input type="radio" class="" checked="checked" value="Economy" name="cabinClass" />
+    Clase econ&oacute;mica </div>
+    </div>
+    <div class="cBlue">
+    <div class="mc_campos_line"> <span id="inputSalida"> Salida<br />
+    <input name="from" class="mc_field_2 datepicker" id="from" size="15" />
+    </span><span id="inputRegreso">Regreso<br />
+    <input name="to" class="mc_field_2 datepicker" id="to" size="15" />
+    </span></div>
+    </div>
+        <div class="cWhite" style="display:none">
+        <div class="mc_campos_line">
+        <input name="fechas" type="radio" class="" value="false" checked="checked" />
+        Fechas exactas&nbsp;&nbsp;
+        <input type="radio" class="" value="true" name="fechas" />
+        Fechas flexibles </div>
+        </div>
+        <div class="cWhite">
+            <div class="mc_campos_line pasajeros">
+                <div id="adultPassengers" class="line_sub">
+                    <div class="lbpas">Adultos<br />
+                    (12+)</div>
+                    <select class="select" id="pasajeros" name="pasajeros">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
                     </select>
-                    &nbsp;
-                    <select class="mc_field_1" id="HACIA" name="HACIA">
-                      <option value="0">Hacia</option>
+                </div>
+                <div id="pasajerosninos" class="line_sub">
+                    <div class="lbpas">Niños<br />
+                    (2 - 11)</div>
+                    <select class="select" id="cbpasajerosninos" name="cbpasajerosninos">
+                        <option value="0" selected="selected">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
                     </select>
-                  </div>
                 </div>
-                <div class="cWhite">
-                  <div class="mc_campos_line">
-                    <input type="radio" class="" value="Business" name="cabinClass" />
-                    Clase ejecutiva&nbsp;&nbsp;
-                    <input type="radio" class="" checked="checked" value="Economy" name="cabinClass" />
-                    Clase econ&oacute;mica </div>
-                  </div>
-                  <div class="cBlue">
-                    <div class="mc_campos_line"> <span id="inputSalida"> Salida<br />
-                      <input name="from" class="mc_field_2 datepicker" id="from" size="15" />
-                    </span><span id="inputRegreso">Regreso<br />
-                    <input name="to" class="mc_field_2 datepicker" id="to" size="15" />
-                  </span></div>
-                </div>
-                <div class="cWhite" style="display:none">
-                  <div class="mc_campos_line">
-                    <input name="fechas" type="radio" class="" value="false" checked="checked" />
-                    Fechas exactas&nbsp;&nbsp;
-                    <input type="radio" class="" value="true" name="fechas" />
-                    Fechas flexibles </div>
-                  </div>
-                  <div class="cWhite">
-                    <div class="mc_campos_line pasajeros">
-                      <div id="adultPassengers" class="line_sub">
-                        <div class="lbpas">Adultos<br />
-                          (12+)</div>
-                          <select class="select" id="pasajeros" name="pasajeros">
-                            <option value="1" selected="selected">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                          </select>
-                        </div>
-                        <div id="pasajerosninos" class="line_sub">
-                          <div class="lbpas">Ni&ntilde;os<br />
-                            (2 - 11)</div>
-                            <select class="select" id="cbpasajerosninos" name="cbpasajerosninos">
-                              <option value="0" selected="selected">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                              <option value="7">7</option>
-                              <option value="8">8</option>
-                            </select>
-                          </div>
-                          <div id="infantesPasajeros" class="line_sub">
-                            <div class="lbpas">Infantes<br />
-                              (0 - 1)</div>
-                              <select class="select" id="cbinfantesPasajeros" name="cbinfantesPasajeros">
-                                <option value="0" selected="selected">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                              </select>
-                            </div>
-                            <div class="limpiar"></div>
-                          </div>
-                        </div>
-                        <div class="cWhite">
-                          <div class="btnSubmit">
-                            <input name="coupon" id="coupon" type="hidden" value="" />
-                            <a id="btnSubmit"><img width="179" height="36" style="border:none" src="images/btn_bookin_ES.jpg" alt="Bookin" /></a></div>
-                          </div>
-                          <div class="limpiar"></div>
-                        </div>
-                      </div> 
-
-                      <br />
-                      <br />
+                <div id="infantesPasajeros" class="line_sub">
+                    <div class="lbpas">
+                        Infantes<br />(0 - 1)
                     </div>
-                  </div>
+                <select class="select" id="cbinfantesPasajeros" name="cbinfantesPasajeros">
+                    <option value="0" selected="selected">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                </div>
+                <div class="limpiar"></div>
+            </div>
+        </div><!--cWhite-->
 
-                  <div id="contenidopromo">
-                    
-                     
-                      <table width="319" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                          <td width="196" style="font-style: italic; font-size: 16px;">Compártalo con sus amigos</td>
-                          <td width="94"><a href="http://www.facebook.com/copaairlines?d1=flashSale-VISA-190716-fb" target="_blank">
-                            <img src="images/rs_fb.jpg" width="32" height="35" border="0" alt="Logo facebook" /></a><a href="https://twitter.com/CopaAirlines?d1=flashSale-VISA-190716-tw" target="_blank"><img src="images/rs_icon_tw.jpg" alt="Logo twitter" width="30" height="35" border="0" /></a></td>
-                          </tr>
-                        </table>
-                      </div>
+        <div class="cWhite">
+            <div class="btnSubmit">
+                <input name="coupon" id="coupon" type="hidden" value="" />
+                <a id="btnSubmit">
+                    <img width="179" height="36" style="border:none" src="images/btn_bookin_ES.jpg" alt="Bookin" />
+                </a>
+            </div>
+        </div>
+        <div class="limpiar"></div>
+    </div>
+    </div> 
 
-                      <br />
+    <br />
+    <br />
+    </div>
+    </div>
+
+    <div id="contenidopromo">
+        <table width="319" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="196" style="font-style: italic; font-size: 16px;">Compártalo con sus amigos</td>
+                <td width="94">
+                    <a href="http://www.facebook.com/copaairlines?d1=flashSale-VISA-190716-fb" target="_blank">
+                        <img src="images/rs_fb.jpg" width="32" height="35" border="0" alt="Logo facebook" />
+                    </a>
+                    <a href="https://twitter.com/CopaAirlines?d1=flashSale-VISA-190716-tw" target="_blank">
+                        <img src="images/rs_icon_tw.jpg" alt="Logo twitter" width="30" height="35" border="0" />
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br />
                    
-                    <img src="images/bg-footer_es.png" width="910" height="77" alt="Footer back" />
+    <img src="images/bg-footer_es.png" width="910" height="77" alt="Footer back" />
 
     <table width="842" border="0" cellspacing="0" cellpadding="0" align="center">
-    <tr>
-    <td width="216" align="left">
-    <img src="images/hub_logo_espanol_-01.png" width="180" height="63" alt="Logo Hub" /></td>
-    <td width="674" align="right">
-    <img src="images/copa_logo2.png" width="180" height="63" alt="Logo Copa Airlines" /></td>
-    </tr>
+        <tr>
+            <td width="216" align="left">
+                <img src="images/hub_logo_espanol_-01.png" width="180" height="63" alt="Logo Hub" />
+            </td>
+            <td width="674" align="right">
+                <img src="images/copa_logo2.png" width="180" height="63" alt="Logo Copa Airlines" />
+            </td>
+        </tr>
     </table>
 
 
-  <div id="legales">
+        <div id="legales">
 
-    <p><span class="derechos"><a href="http://email.copa.com/t/2EUB-TGIQ-324LWQFK3C/cr.aspx">Haga clic aquí para ver los Términos y Condiciones</a></span></p>
-                
-    <span class="derechos">Copyright©2016 Copa Airlines, Incorporated. Todos los derechos reservados.  </span>
-    <p>
-  <br />
-    <strong>Business Park, Torre Norte      <br />
-      Urbanización Costa del Este<br />
-      Panamá, Rep. de Panamá<br />
-    </strong></p>
+            <p><span class="derechos"><a href="http://email.copa.com/t/2EUB-TGIQ-324LWQFK3C/cr.aspx">Haga clic aquí para ver los Términos y Condiciones</a></span></p>
+                        
+            <span class="derechos">Copyright©2016 Copa Airlines, Incorporated. Todos los derechos reservados.  </span>
+            <p>
+                <br />
+                <strong>Business Park, Torre Norte      <br />
+                  Urbanización Costa del Este<br />
+                  Panamá, Rep. de Panamá<br />
+                </strong>
+            </p>
 
 
-  </div>
+        </div>
 
 
 
         </div>
-    </div> <!--fin de contenido-->
+    
     <script type="text/javascript" src="js/origenes_destinos_fechas.js"></script>
     <script type="text/javascript" src="js/pcfunctions_270616.js"></script>
 </body>
