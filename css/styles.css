@@ -345,6 +345,7 @@ a:active {
 	height:auto;
 	float:right;
 	margin-left:12px;
+	margin-top:20px;
 }
 .titulos_destacados{
 	font-weight: bold;
@@ -370,9 +371,11 @@ a:active {
 	text-align:justify;
 	font-size:10px;
 	font-weight:lighter;
-	
-	
-	}
+	} 
+
+#legales p {
+	line-height: 1.2em;
+}
 .derechos{
 	font-size:12px;
 	font-weight:bold}

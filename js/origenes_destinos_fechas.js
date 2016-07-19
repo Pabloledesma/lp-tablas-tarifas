@@ -1,17 +1,7 @@
 var sysCities = {
     "fromcities": [
-        {"name":"Boston, US", "id":"BOS"},
-            {"name":"Chicago, US", "id":"ORD"},
-            {"name":"Fort Lauderdale, US", "id":"FLL"},
-            {"name":"Las Vegas, US", "id":"LAS"},
-            {"name":"Los Angeles, US", "id":"LAX"},
-            {"name":"Miami, US", "id":"MIA"},
-            {"name":"New York, US", "id":"JFK"},
-		{"name":"New Orleans, US", "id":"MSY"},
-		{"name":"San Francisco, US", "id":"SFO"},
-            {"name":"Orlando, US", "id":"MCO"},
-            {"name":"Tampa, US", "id":"TPA"},
-            {"name":"Washington Dulles, US", "id":"IAD"}    
+       {"name":"Panama, PA", "id":"PTY"}
+     
     ],
 
     "tocities": [
@@ -91,8 +81,8 @@ var sysCities = {
     ]
 },
 
-departure_date = new Date(2016, 03 - 1, 15),
-return_date = new Date(2016, 06 - 1, 30),
+departure_date = new Date(2016, 07 - 1, 20),
+return_date = new Date(2016, 12 - 1, 31),
 
 // Mensajes de error para el booking
 msj = {
@@ -118,3 +108,4 @@ msj = {
             return_date: "Selecionar data de retorno"
       }
 };
+
