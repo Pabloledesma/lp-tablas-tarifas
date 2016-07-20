@@ -246,9 +246,10 @@ $(document).ready(function(){
     
     var firstTab = $("ul#tarifas li a").first().attr('href');
 
-    $.history.init(function(url) {
-        loadHtml(url == "" ? firstTab : url);
-    });
+    //no es compatible con jquery 2
+    // $.history.init(function(url) {
+    //     loadHtml(url == "" ? firstTab : url);
+    // });
 
     $('.jqload').on('click', function(e) {
 

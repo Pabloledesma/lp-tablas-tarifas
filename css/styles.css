@@ -36,27 +36,22 @@
 }
 
 body {
-	margin:0;
+	padding-top: 50px;
+	padding-bottom: 20px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;
 	color:#69737b;
-	
 }
-.limpiar {
-	clear:both;	
-}
+
 select, input{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;
 }
-select {
-	width:160px;
-}
+
 .canvas_booking {
-	height: 345px;
-	width: 450px;
+	
 	border:#005a9d solid 1px;
-	position: relative;
+	
 }
 
 .canvas_booking .cWhite {
@@ -305,9 +300,9 @@ a:active {
 	}
 
 .logos{ 
-	float:right;
+	/*float:right;
 	margin-right: 40px;
-	margin-top:26px; 
+	margin-top:26px; */
 }
 	
 /*Middle */
