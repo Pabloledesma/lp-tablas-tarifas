@@ -5,8 +5,8 @@ import { Flight } from '../../model/flight';
 
 @Component({
 	selector: 'booking',
-	templateUrl: 'app/components/booking/booking.html'
-	
+	templateUrl: 'app/components/booking/booking.html',
+	styleUrls: ['app/components/booking/booking.css']
 })
 
 export class Booking {
@@ -20,12 +20,12 @@ export class Booking {
 	flight = new Flight(
 		true,	 
 		false, 
-		origins[4], 
-		destinations[3],
+		origins[2].name, 
+		destinations[3].name,
 		true,
 		false,
-		new Date('28/07/2016'),
-		new Date('02/08/2016'),
+		new Date('07/28/2016'),
+		new Date('08/02/2016'),
 		1,
 		0,
 		0
@@ -34,7 +34,7 @@ export class Booking {
 	submitted = false;
   	onSubmit() { this.submitted = true; }
 
-  	
+
   // TODO: Remove this when we're done
   get diagnostic() { return JSON.stringify(this.flight); }
 

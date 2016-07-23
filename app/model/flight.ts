@@ -10,8 +10,8 @@ export class Flight {
 		public departureDate: Date,
 		public returnDate: Date,
 		public adults: number = 1,
-		public childrens?: number = 0,
-		public infants?: number = 0   
+		public childrens: number = 0,
+		public infants: number = 0   
 	){}
 
 }

@@ -31,7 +31,7 @@ System.register(['@angular/core', '../../data/mock-places', '../../model/flight'
                     this.adults = [1, 2, 3, 4, 5, 6, 7, 8];
                     this.childrens = [0, 1, 2, 3, 4, 5, 6, 7, 8];
                     this.infants = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-                    this.flight = new flight_1.Flight(true, false, mock_places_1.origins[4], mock_places_1.destinations[3], true, false, new Date('28/07/2016'), new Date('02/08/2016'), 1, 0, 0);
+                    this.flight = new flight_1.Flight(true, false, mock_places_1.origins[2].name, mock_places_1.destinations[3].name, true, false, new Date('07/28/2016'), new Date('08/02/2016'), 1, 0, 0);
                     this.submitted = false;
                 }
                 Booking.prototype.onSubmit = function () { this.submitted = true; };
@@ -44,7 +44,8 @@ System.register(['@angular/core', '../../data/mock-places', '../../model/flight'
                 Booking = __decorate([
                     core_1.Component({
                         selector: 'booking',
-                        templateUrl: 'app/components/booking/booking.html'
+                        templateUrl: 'app/components/booking/booking.html',
+                        styleUrls: ['app/components/booking/booking.css']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], Booking);
