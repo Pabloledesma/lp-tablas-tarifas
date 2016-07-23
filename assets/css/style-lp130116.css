@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@media(max-width:1489px){
+	#banner > img {margin-top: -10px;}
+} 
+
 a:link {
 	color: #1563A8;
 	text-decoration: none;
@@ -47,7 +51,6 @@ a:active {
 	width:842px;
     height:318px;
     alignment-adjust:central;
-    margin: 5px 0 0;
    	background-repeat: no-repeat;
 	}
 #contenido{
@@ -316,3 +319,4 @@ font-size: 12px;
 }
 
 #ui-datepicker-div { display: none; }
+
