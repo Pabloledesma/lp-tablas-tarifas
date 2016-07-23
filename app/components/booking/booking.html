@@ -3,10 +3,20 @@
         <div class="form-group form-group-sm">
             <div class="col-sm-10 col-sm-offset-2">
                 <label class="control-label">
-                    <input type="radio"> Round trip
+                    <input 
+                        type="radio"
+                        name="round" 
+                        [(ngModel)] = "flight.round"
+                    > 
+                    Round trip
                 </label>
                 <label class="control-label">
-                    <input type="radio"> One-way
+                    <input 
+                        type="radio"
+                        name="oneWay"
+                        [(ngModel)] = "flight.oneWay" 
+                    > 
+                    One-way
                 </label>    
             </div>
         </div>
@@ -14,7 +24,11 @@
         <div class="form-group form-group-sm">
             <label class="col-sm-2 control-label" for="from">From</label>
             <div class="col-sm-10">
-                <select class="form-control" id="from">
+                <select 
+                    class="form-control" 
+                    name="from"
+                    [(ngModel)] = "flight.from"
+                >
                     <option>--Select country--</option>
                     <option 
                         *ngFor="let origin of origins"
@@ -28,7 +42,11 @@
         <div class="form-group form-group-sm">
             <label class="col-sm-2 control-label" for="to">To</label>
             <div class="col-sm-10">
-               <select class="form-control" id="to">
+               <select 
+                    class="form-control" 
+                    name="to"
+                    [(ngModel)] = "flight.to"
+                >
                     <option selected>--Select country--</option>
                     <option 
                         *ngFor="let destination of destinations"
@@ -43,10 +61,20 @@
         <div class="form-group form-group-sm">
             <div class="col-sm-10 col-sm-offset-2">
                 <label class="control-label">
-                    <input type="checkbox"> Bussines Class
+                    <input 
+                        type="checkbox"
+                        name="bussines"
+                        [(ngModel)] = "flight.bussines"
+                    > 
+                    Bussines Class
                 </label>
                 <label class="control-label">
-                    <input type="checkbox"> Economy Class
+                    <input 
+                        type="checkbox"
+                        name="economy"
+                        [(ngModel)] = "flight.economy"
+                    > 
+                    Economy Class
                 </label>    
             </div>
         </div>
@@ -54,42 +82,74 @@
         <div class="form-group form-group-sm">
             <label class="col-sm-2 control-label" for="to">Departure</label>
             <div class="col-sm-10">
-               <input class="form-control" type="date" name="departure">
+               <input 
+                    class="form-control" 
+                    type="date" 
+                    name="departureDate"
+                    [(ngModel)] = "flight.dapertureDate"
+                >
             </div>
         </div>
 
          <div class="form-group form-group-sm">
             <label class="col-sm-2 control-label" for="to">Return</label>
             <div class="col-sm-10">
-               <input class="form-control" type="date" name="return">
+               <input 
+                    class="form-control" 
+                    type="date" 
+                    name="returnDate"
+                    [(ngModel)] = "flight.returnDate"
+                >
             </div>
         </div>
 
          <div class="form-group form-group-sm">
             <label class="col-sm-2 control-label" for="to">Adults(+12)</label>
             <div class="col-sm-2">
-               <select class="form-control" id="adults">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+               <select 
+                    class="form-control" 
+                    name="adults"
+                    [(ngModel)] = "flight.adults"
+                >
+                    <option 
+                        *ngFor="let adult of adults" 
+                        value="{{adult}}"
+                    >
+                        {{adult}}
+                    </option>
                 </select>
             </div>
 
              <label class="col-sm-2 control-label" for="to">Childrens</label>
             <div class="col-sm-2">
-               <select class="form-control" id="childrens">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+               <select 
+                    class="form-control" 
+                    name="childrens"
+                    [(ngModel)] = "flight.childrens"
+                >
+                    <option
+                        *ngFor="let children of childrens" 
+                        value="{{children}}"
+                    >
+                        {{children}}
+                    </option>
+                    
                 </select>
             </div>
 
              <label class="col-sm-2 control-label" for="to">Infants</label>
             <div class="col-sm-2">
-               <select class="form-control" id="infants">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+               <select 
+                    class="form-control" 
+                    name="infants"
+                    [(ngModel)] = "flight.infants"
+                >
+                    <option 
+                        *ngFor="let infant of infants"
+                        value="{{infant}}"
+                    >
+                    {{infant}}
+                    </option>
                 </select>
             </div>
         </div>
@@ -101,3 +161,4 @@
         
     </form>
 </div>
+{{diagnostic}}
